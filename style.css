@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #1f2933;
+  line-height: 1.6;
+}
+
+header {
+  background: #1e3a8a;
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.filters label {
+  font-weight: 600;
+}
+
+.filters select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+}
+
+main {
+  padding: 1rem;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+   background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+table {
+  width: 100%;
+  min-width: 1400px; 
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #1e40af;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.75rem;
+  border-bottom: 2px solid #1e3a8a;
+  z-index: 2;
+  
+}
+
+tbody td {
+  padding: 0.6rem 0.75rem;
+  vertical-align: center;
+  border-bottom: 1px solid #e5e7eb; 
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+tbody tr:hover {
+  background-color: #eef2ff;
+}
+
+table a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+.small {
+  text-align: center;
+  font-weight: 600;
+}
+
+.categoria {
+  font-weight: 700;
+  color: #000000;
+}
+
+td {
+  /*max-width: 420px;*/
+  word-wrap: break-word;
+  white-space: normal;
+
+}
+
+footer {
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+
+  
+  header h1 {
+    font-size: 1.1rem;
+  }
+
+  
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .filters select,
+  .filters input {
+    width: 100%;
+  }
+
+  
+  .sticky-col {
+    position: static !important;
+    left: auto !important;
+    box-shadow: none !important;
+    background-color: inherit !important;
+    z-index: auto !important;
+  }
+
+  
+  thead {
+    display: none;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tbody tr {
+    background: #ffffff;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 0.75rem;
+  }
+
+  tbody td {
+    border: none;
+    padding: 0.35rem 0;
+    font-size: 0.85rem;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    display: block;
+    color: #1e40af;
+    margin-bottom: 0.15rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  tbody td.categoria {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #1e3a8a;
+  }
+
+  tbody a {
+    word-break: break-word;
+  }
+}
